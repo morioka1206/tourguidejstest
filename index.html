@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/@sjmc11/tourguidejs/dist/css/tour.min.css">
+  <script src="https://unpkg.com/@sjmc11/tourguidejs/dist/tour.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>TourGuide.js</title>
+</head>
+
+<body>
+  <div class="tour-guide">
+    <h1 data-tg-tour="最初のステップ" data-tg-title="ツアースタート" data-tg-order=1>TourGuide 1</h1>
+    <h1 data-tg-tour="２番目のステップ" data-tg-title="基本は上から順番に" data-tg-order=2>TourGuide 2</h1>
+    <h1 data-tg-tour="４番目のステップ" data-tg-title="オプションもいろいろ" data-tg-order=4>TourGuide 4</h1>
+    <h1 data-tg-tour="５番目のステップ" data-tg-order=5 data-tg-title="ツアー終了">TourGuide 5</h1>
+    <h1 data-tg-tour="３番目のステップ" data-tg-title="data-tg-orderで順番変更" data-tg-order=3>TourGuide 3</h1>
+  </div>
+
+  <script>
+    const option = {
+      // ダイアログの幅
+      dialogWidth: 400,
+
+      // 閉じるボタン（×）を非表示にする
+      closeButton: false,
+
+      // 「Next」ボタンの表示テキストを変更
+      nextLabel: "次へ",
+
+      // 「Back」ボタンの表示テキストを変更
+      prevLabel: "戻る",
+
+      // 進捗バーを追加
+      progressBar: string = "#4ca669"
+    }
+
+    const tg = new tourguide.TourGuideClient(option);
+
+    tg.start();
+  </script>
+</body>
+
+</html>
+
+
+<!-- {
+autoScroll: boolean = true// 要素への自動スクロール
+autoScrollSmooth: boolean = true// 自動スクロールを滑らかにする。
+autoScrollOffset: number = 20// スムーズなスクロールのための端からのオフセット
+backdropClass: string = ""// ツアー背景のための追加のCSSクラス
+backdropColor: string = "rgba(20,20,21,0.84)"// RGBA のみのサポートです。
+targetPadding: number = 30// px単位のハイライトされたターゲットの周りのスペース
+backdropAnimate: boolean = true// バックドロップの位置とサイズをアニメーション化する。
+dialogClass: string = ""// ツアーダイアログのための追加のCSSクラス
+dialogZ: number = 999// ダイアログのz-index
+dialogWidth: number = 0// ダイアログの幅のプロパティ - コンテンツに画像を読み込む場合に推奨します。
+dialogMaxWidth: number = 340// ダイアログの最大幅のスタイルプロパティ
+dialogAnimate: boolean = true// ダイアログの位置とサイズを変更する。
+closeButton: boolean = true// 閉じるボタンを表示する。
+nextLabel: string = "Next"// 次ボタン用のテキスト
+prevLabel: string = "Back"// 前ボタンのテキスト
+finishLabel: string = "Finish"//終了ボタン用テキスト
+hidePrev: boolean = false// prev ボタンを隠す。
+hideNext: boolean = false// hide nextボタン
+completeOnFinish: boolean = true// 終了時にツアーを終了としてlocalStorageにセットする。
+showStepDots: boolean = true// ツアーの進行状況をドットで表示する。
+stepDotsPlacement: 'footer' | 'body' = "footer"// ダイアログボディ/フッターにドットを表示する。
+showButtons: boolean = true// next/prev ボタンを表示する。
+showStepProgress: boolean = true// 人間が読める1/5のステップ進捗を表示する
+progressBar: string = ""// ダイアログヘッダーの下にプログレスバーを表示する - 色を渡すと有効になる
+keyboardControls: boolean =false// next & prev 矢印キーと esc キーを表示する。
+exitOnEscape: boolean = true// エスケープキーでツアーを終了します。
+exitOnClickOutside: boolean = true// バックドロップクリックでツアーを終了する。
+rememberStep: boolean = true// 最後にアクティブになったステップでツアーを開始します。
+debug: boolean = false// コンソールロギングを表示する。
+ステップを指定します。TourGuideStep[]// ツアーステップの事前定義
+} -->
